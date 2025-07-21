@@ -1,0 +1,536 @@
+/* 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    line-height: 2;
+    margin-top: 70px;
+    font-size: 20px;
+}
+.heading h2{
+    font-size: 30px;
+}
+.heading img{
+    width: 140px;
+}
+.choose_pet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    font: 15px;
+}
+.down_arrow{
+    background-color: bisque;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    border-radius: 50%;
+}
+.pet_selected{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    font-size: large;
+}
+.select{
+    margin-top: 40px;
+    display: flex;
+   gap: 80px;
+
+}
+.kitty{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.kitty img{
+    width: 220px;
+}
+.puffy{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.puffy img{
+    width: 220px;
+}
+.top_heading{
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+.levels {
+  position: relative;
+  /* left: 40px;  */
+/* transform: translateY(-50%); */
+/* display: flex;
+  /* flex-direction: row; */
+/* align-items: center;
+  justify-content: center;
+  margin-left: -20px;
+  text-align: center;
+  /* gap: 3px; */
+/* } */
+
+/* .bar-container {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+label{
+    padding: 4px;
+}
+.bar {
+  width: 18px;
+  height: 250px;
+  border: 2px solid #333;
+  background-color: #eee;
+  border-radius: 30px;
+  position: relative;
+}
+
+.fill {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 62% 30%;
+  height: 100vh;
+}
+
+/* Grid placement */
+/* .left-section {
+  grid-row: 1 / span 2; /* take both rows */
+/* grid-column: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-right-section {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: #accca0;
+  padding: 20px;
+  display: flex; */
+/* justify-content: center;
+  align-items: center;
+}
+
+.pet_container{
+    width: 120px;
+     text-align: center;
+}
+.pet_container img{
+    width: 180px;
+    max-width: 180px;
+  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bottom-right-section {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: #d9edf7;
+  padding: 20px;
+   display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Makes buttons wrap if needed */
+/* }
+
+.button-group button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+   transition: background-color 0.3s ease;
+} */
+
+/* .button-group button:hover {
+  background-color: #388e3c;
+}
+
+#pet-img {
+  transition: opacity 0.5s ease;
+} */
+
+
+/* ------------------------------
+  🎮 Base Styles for All Devices
+------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #c2e9fb, #a1c4fd);
+  color: #333;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1100px;
+  height: 95vh;
+  border-radius: 20px;
+  background: #fff7f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choose_pet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  font: 15px;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+
+  margin-top: 70px;
+  font-size: 20px;
+}
+
+#heroimg {
+  width: 170px;
+}
+
+.down_arrow {
+  background-color: bisque;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* ------------------------------
+  🐾 Pet Selection Section
+------------------------------ */
+
+.pet-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.select {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+
+}
+
+.pet-option {
+  border: 2px dashed #ffb703;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  max-width: 800px;
+}
+
+.pet-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pet-option img {
+  max-width: 150px;
+  height: auto;
+}
+
+.pet-option button {
+  background: #ff9f1c;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.pet-option button:hover {
+  background: #ff6b00;
+  transform: scale(1.05);
+}
+
+
+
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_heading {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.barwithpetandtask {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.allbar-in-one {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+.petwithtask{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.bar-group {
+  display: flex;
+  gap: 1rem;
+  margin-right: 20px;
+}
+
+.bar-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.bar-container {
+  flex: 1;
+}
+
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.petwithtask {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  gap: 2rem;
+}
+
+.pet_container {
+  border: 2px dashed #ffb703;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 40px;
+  margin-top: 20px;
+}
+
+.pet_container img {
+  width: 180px;
+  height: auto;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #4e49d2;
+}
+
+#pet-name{
+  margin-top: 10px;
+}
+
+@media (max-width: 620px) {
+  .hero-grid {
+    flex-direction: column-reverse;
+  }
+
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .pet-selection {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .select {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .pet-button {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-game {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .status-bars {
+    width: 80%;
+    align-items: center;
+  }
+
+  .bar-container {
+    width: 100%;
+  }
+
+  #pet-img {
+    width: 200px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+  }
+
+  .pet-option img {
+    max-width: 100px;
+  }
+
+  .pet-selection {
+    flex-direction: column;
+  }
+
+  .select {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 40px;
+    width: auto;
+
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  #pet-img {
+    width: 150px;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section class="welcome" id="welcome">
+        <div class="heading">
+            <h1>Welcome <br>To <br> <span>VIRTUAL PET STIMULATOR</span></h1>
+
+            <img id="heroimg" src="/assets/HERO-IMG-prt-stimulator.png" alt="">
+        </div>
+        <div class="choose_pet">
+            <h2>Choose Your Pet</h2>
+            <div class="down_arrow" id="scrolltopets">&#x2193;</div>
+        </div>
+    </section>
+    <section class="pet-selection" id="pet-selection">
+        <div class="pet_selected">
+            <h2>Select Your Pet</h2>
+            <div class="select">
+                <div class="pet-option" data-pet="kitty">
+                    <img src="/assets/kitty-hero-img.png" alt="kitty">
+                    <button>Kitty</button>
+                </div>
+                <div class="pet-option" data-pet="puffy">
+                    <img src="/assets/dog-hero-img.png" alt="puffy">
+                    <button>Puffy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero" id="maingame">
+        <div class="top_heading">
+            <h1>VIRTUAL PET STIMULATOR</h1>
+        </div>
+        <div class="barwithpetandtask">
+            <div class="allbar-in-one">
+                <div class="bar-group">
+                    <img src="/assets/ha" alt="Happiness" class="bar-icon" />
+                    <div class="bar-container">
+                        <div class="bar">
+                            <div class="fill" id="happiness-bar" style="background-color: orange; width: 60%;"></div>
+                        </div>
+                        <div class="bar-label">
+                            <label>Happiness</label>
+                            <span id="happiness-percent">60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bar-group">
+                    <img src="/assets/energetic-LOGO.png" alt="Energy" class="bar-icon" />
+                    <div class="bar-container">
+                        <div class="bar">
+                            <div class="fill" id="energy-bar" style="background-color: skyblue; width: 80%;"></div>
+                        </div>
+                        <div class="bar-label">
+                            <label>Energy</label>
+                            <span id="energy-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bar-group">
+                    <img src="/assets/food-LOGO.png" alt="Hunger" class="bar-icon" />
+                    <div class="bar-container">
+                        <div class="bar">
+                            <div class="fill" id="hunger-bar" style="background-color: green; width: 50%;"></div>
+                        </div>
+                        <div class="bar-label">
+                            <label>Hunger</label>
+                            <span id="hunger-percent">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="petwithtask">
+                <div class="pet_container">
+                    <img id="pet-img" src="/assets/kitty-hero-img.png" alt="pet">
+                    <h3 id="pet-name">Pet Name</h3>
+                </div>
+
+                <div class="button-group">
+                    <button id="eat-btn">Eat</button>
+                    <button id="sleep-btn">Sleep</button>
+                    <button id="bath-btn">Bath</button>
+                    <button id="play-btn">Play</button>
+                    <button id="exercise-btn">Exercise</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
