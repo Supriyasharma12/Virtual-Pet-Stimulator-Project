@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let happiness = 60;
     let energy = 80;
     let hunger = 50;
+    const selectedPet="kitty";
 
     scrolltopetbtn.addEventListener("click", () => {
         petselectionsection.scrollIntoView({ behavior: "smooth" });     //scrollIntoView() is a JavaScript method that scrolls the browser automatically to bring an element into the visible area of the screen
@@ -92,13 +93,15 @@ window.addEventListener("DOMContentLoaded", () => {
     function updatebar(value, bar, percentagelabel) {
         value = Math.max(0, Math.min(100, value));
         bar.style.width = value + "%";
-        percentagelabel.textContent = value + "%";
+        percentLabel.textContent = value + "%";
+        return value;
     }
 
     function updateAll(){
         happiness = updatebar(happiness,happinessbar,happinesspercent);
         energy = updatebar(energy,energy,energypercent);
         hunger = updatebar(hunger,hungerbar,hungerpercent);
+        updatemoodimg();
     }
      
     function updatepetimg(action){
@@ -123,42 +126,48 @@ window.addEventListener("DOMContentLoaded", () => {
 
     //buttons
     eatbtn.addEventListener("click", () => {
+        showmoodimg("eating");
         hunger += 15;
         energy -= 5;
-        updadeAll();
-    });
-
-    sleepbtn.addEventListener("click", () => {
-        energy += 20;
         happiness += 5;
         updateAll();
     });
 
+    sleepbtn.addEventListener("click", () => {
+        showmoodimg("sleeping")
+        energy += 20;
+        happiness -= 5;
+        updateAll();
+    });
+
     bathbtn.addEventListener("click", () => {
+        showmoodimg("bathing")
         happiness += 5;
         updateAll();
     });
 
     playbtn.addEventListener("click", () => {
+        showmoodimg("playing")
         happiness += 10;
-        hunger -= 10;
+        hunger += 5;
         energy -= 10;
         updateAll();
     });
 
     exercisebtn.addEventListener("click", () => {
+        showmoodimg("exercising")
         energy -= 15;
         happiness += 5;
         hunger += 10;
         updateAll();
     });
-    
+
 
     setInterval(() => {
         happiness -= 2;
         energy -= 2;
         hunger += 2;
         updateAll();
-    }, 1000);
+    }, 10000);
 
 });
