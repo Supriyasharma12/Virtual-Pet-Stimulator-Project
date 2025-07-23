@@ -452,6 +452,32 @@ section {
   margin-top: 10px;
 }
 
+#mood-bubble {
+    background: url("/assets/thinking_cloud.png") no-repeat center center;
+    background-size: contain;
+    width: 280px;
+    height: 120px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: -55px;
+    left: 90%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding-top: 38px;
+    pointer-events: none;
+    z-index: 10;
+    
+}
+
+#mood-bubble.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.05);
+}
+
 @media (max-width: 620px) {
   .hero-grid {
     flex-direction: column-reverse;
